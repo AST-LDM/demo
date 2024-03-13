@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Face-styled Diffusion Model for Text-to-Speech.">
+  <meta name="keywords" content="Face-TTS, TTS, Audiovisual learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imaginary Voice: Face-styled Diffusion Model for Text-to-Speech</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/NAVER_AI_Symbol_FullColor.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://lee-jiyoung.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div> -->
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Imaginary Voice: Face-styled Diffusion Model for Text-to-Speech</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://lee-jiyoung.github.io">Jiyoung Lee</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://mm.kaist.ac.kr/joon">Joon Son Chung</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://soowhanchung.github.io">Soo-Whan Chung</a><sup>3</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>NAVER AI Lab,</span>
+            <span class="author-block"><sup>2</sup>KAIST,</span>
+            <span class="author-block"><sup>3</sup>NAVER CLOUD</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2302.13700"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/naver-ai/facetts"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <div class="columns is-vcentered is-centered">
+            <!-- <div class="column is-3 has-text-centered"> -->
+              <img src="./static/images/Figure1.png"/>
+            <!-- </div> -->
+        </div>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Face-TTS</span> generates speech from given text script and face image.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The goal of this work is zero-shot text-to-speech synthesis, with speaking styles and voices learnt from facial characteristics.
+            Inspired by the natural fact that people can imagine the voice of someone when they look at his or her face, we introduce a face-styled diffusion text-to-speech (TTS) model within a unified framework learnt from visible attributes, called <span class="dnerf">Face-TTS</span>. 
+            This is the first time that face images are used as a condition to train a TTS model.
+          </p>
+          <p>
+            We jointly train cross-model biometrics and TTS models to preserve speaker identity between face images and generated speech segments.
+  We also propose a speaker feature binding loss to enforce the similarity of the generated and the ground truth speech segments in speaker embedding space.
+  Since the biometric information is extracted directly from the face image, our method does not require extra fine-tuning steps to generate speech from unseen and unheard speakers.
+  We train and evaluate the model on the LRS3 dataset, an in-the-wild audio-visual corpus containing background noise and diverse speaking styles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Examples</h2>
+        <div class="content has-text-justified">
+          <p>Here, all of the results were using only unseen and unheard speakers.</p>
+          <p>Note that we does not aim to reconstruct an accurate voice of the person, 
+            but rather to generate acoustic characteristics that are correlated with the input face.</p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Case 1 (Real face from LRS3 dataset)</h3>
+        <div class="is-vcentered">
+            <img src="./static/images/mos1.png"/>
+            <p>
+              <b>Text</b>: The employees raced the elevators to the first floor. 
+              Givens saw Oswald standing at the gate on the fifth floor as the elevator went by.
+              <br><br>
+            </p>
+        </div>
+      
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              <b>From voice</b>
+            </p>
+            <audio controls><source src="./static/wavs/mos1-voice.wav" type="audio/wav"></audio>
+          </div>
+          <div class="column content">
+            <p>
+              <b>From face</b>
+            </p>
+            <audio controls><source src="./static/wavs/mos1-face.wav" type="audio/wav"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Case 2 (Real face from LRS3 dataset)</h3>
+        <div class="is-vcentered">
+            <img src="./static/images/mos2.png"/>
+            <p>
+              <b>Text</b>: These had been attributed to political action; 
+              some thought that the large purchases in foreign grains, effected at losing prices,
+              <br><br>
+            </p>
+        </div>
+      
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              <b>From voice</b>
+            </p>
+            <audio controls><source src="./static/wavs/mos2-voice.wav" type="audio/wav"></audio>
+          </div>
+          <div class="column content">
+            <p>
+              <b>From face</b>
+            </p>
+            <audio controls><source src="./static/wavs/mos2-face.wav" type="audio/wav"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Case 3 (Real face from LRS3 dataset)</h3>
+        <div class="is-vcentered">
+            <img src="./static/images/mos3.png"/>
+            <p>
+              <b>Text</b>: Four point eight to five point six seconds if the second shot missed,
+              <br><br>
+            </p>
+        </div>
+      
+        <div class="columns is-centered">
+          <div class="column content">
+          <p>
+            <b>From voice</b>
+          </p>
+          <audio controls><source src="./static/wavs/mos3-voice.wav" type="audio/wav"></audio>
+          </div>
+          <div class="column content">
+          <p>
+            <b>From face</b>
+          </p>
+          <audio controls><source src="./static/wavs/mos3-face.wav" type="audio/wav"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Case 4 (Real face from LRS3 dataset)</h3>
+        <div class="is-vcentered">
+            <img src="./static/images/mos4.png"/>
+            <p>
+              <b>Text</b>: And so numerous were his opportunities of showing favoritism, that all the prisoners may be said to be in his power.
+              <br><br>
+            </p>
+        </div>
+      
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              <b>From voice</b>
+            </p>
+            <audio controls><source src="./static/wavs/mos4-voice.wav" type="audio/wav"></audio>
+          </div>
+          <div class="column content">
+            <p>
+              <b>From face</b>
+            </p>
+            <audio controls><source src="./static/wavs/mos4-face.wav" type="audio/wav"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Case 5 (Virtual face brought from Stable Diffusion)</h3>
+        <div class="is-vcentered">
+            <img style="width: 224px;" src="./static/images/virtual1.jpg"/>
+            <p>
+              <b>Text</b>: The preference given to the Pentonville system destroyed all hopes of a complete reformation of Newgate.
+              <br><br>
+            </p>
+        </div>
+        <div class="columns is-centered">
+          <div class="column content">
+            <audio controls><source src="./static/wavs/virtual1.wav" type="audio/wav"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Case 6 (Virtual face brought from Stable Diffusion)</h3>
+        <div class="is-vcentered">
+            <img style="width: 224px;" src="./static/images/virtual2.jpg"/>
+            <p>
+              <b>Text</b>: And one or two men were allowed to mend clothes and make shoes. The rules made by the Secretary of State were hung up in conspicuous parts of the prison.
+              <br><br>
+            </p>
+        </div>
+        <div class="columns is-centered">
+          <div class="column content">
+            <audio controls><source src="./static/wavs/virtual2.wav" type="audio/wav"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Ethical Considerations</h2>
+    <div class="column is-full-width">
+      <p>
+        Please be aware that our objective is not to generate an accurate reproduction of the person's voice, but rather to produce acoustic characteristics that are connected to the input face.
+        It is important to note that certain aspects of synthesised speech may not necessarily be linked to face. 
+        Furthermore, <span class="dnerf">Face-TTS</span> should not be used for purposes that are illegal or abusive, and we stand in opposition to such usage.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Related links</h2>
+    <div class="column is-full-width">
+      <p>
+        We need <a href="https://github.com/joonson/yousaidthat">face detector</a> to align the face image into LRS3 construction.
+        The code implementation is heavily borrowed from the official implementation of <a href="https://github.com/huawei-noah/Speech-Backbones/tree/main/Grad-TTS">Grad-TTS</a>.
+        We are deeply grateful for all of the projects.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    If you find this work useful for your research, please cite our paper:
+    <pre><code>@inproceedings{lee2023imaginary,
+  author    = {Lee, Jiyoung and Chung, Joon Son and Chung, Soo-Whan},
+  title     = {Imaginary Voice: Face-styled Diffusion Model for Text-to-Speech},
+  booktitle = {IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)},
+  year      = {2023},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/lee-jiyoung" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This website refers to <a href="https://nerfies.github.io">Nerfies website</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
