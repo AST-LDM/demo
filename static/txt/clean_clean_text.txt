@@ -1,0 +1,9 @@
+ID txt
+1191 A male speaks in a quiet room.
+012 A female speaks in a quiet room.
+088 A female speaks in a quiet room.
+630 A male speaks in a quiet room.
+806 A male speaks in a quiet room.
+229 A female speaks in a quiet room.
+256 A female speaks in a quiet room.
+258 A female speaks in a quiet room.

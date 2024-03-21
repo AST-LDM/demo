@@ -1,0 +1,13 @@
+ID txt
+135 A female speaks in a large living room with a fire crackling.
+139 A female speaks in a large office with printers whirring.
+147 A female speaks in a large bedroom with thunder rumbling.
+186 A female speaks in a large bedroom with wind howling.
+273 A female speaks in a forest with leaves rustling in the wind.
+284 A female speaks in a hilltop with birds tweeting merrily.
+301 A female speaks in a countryside with birds chirping and tractors rumbling.
+377 A female speaks in a small concert hall with instruments tuning.
+860 A male speaks in a campsite with a campfire crackling.
+865 A male speaks in a hilltop with birds chirping happily.
+920 A male speaks in a countryside with birds chirping and a tractor rumbling.
+617 A male speaks in a large bedroom with rain pattering.

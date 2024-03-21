@@ -38,7 +38,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://github.com/AST-LDM/demo">
+      <a class="navbar-item" href="ast-ldm.github.io/demo">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -92,7 +92,7 @@
     <div class="hero-body">
         <div class="columns is-vcentered is-centered">
             <!-- <div class="column is-3 has-text-centered"> -->
-              <img src="./static/images/astldm.png" width="700"/>
+              <img src="./static/images/astldm.png"/>
             <!-- </div> -->
         </div>
       <h2 class="subtitle has-text-centered">
@@ -126,11 +126,12 @@
   </div>
 </section>
 
+
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">AST with Audio reference prompt</h2>
+        <h2 class="title is-3">AST with LLM Text reference prompt</h2>
         <div class="content has-text-justified">
           <p>Here, all of the results were using only unseen and unheard speakers.</p>
         </div>
@@ -143,35 +144,39 @@
 
         <div class="columns is-centered">
           <div class="column content">
-            <p>
-              <b>Content prompt</b>
-            </p>
-            <audio controls><source src="./static/wavs/clean_clean/clean1_035.wav" type="audio/wav"></audio>
+              <p>
+                <b>Reference prompt</b>
+              </p>
+              <p>
+                <b>Content prompt</b>
+              </p>
+              <p>
+                <b>Generated audio</b>
+              </p>
           </div>
           <div class="column content">
             <p>
-              <b>Reference prompt</b>
+              <b>"A male speaks in a quiet room."</b>
             </p>
-            <audio controls><source src="./static/wavs/clean_clean/clean2_035.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_clean_text/cont_1191.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_clean_text/out_1191.wav" type="audio/wav"></audio>
           </div>
           <div class="column content">
             <p>
-              <b>Generated audio</b>
+              <b>"A female speaks in a quiet room."</b>
             </p>
-            <audio controls><source src="./static/wavs/clean_clean/035.wav" type="audio/wav"></audio>
-          </div>          
-        </div>
+            <audio controls><source src="./static/wavs/clean_clean_text/cont_229.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_clean_text/out_229.wav" type="audio/wav"></audio>
+          </div>
 
-        <div class="columns is-centered">
           <div class="column content">
-            <audio controls><source src="./static/wavs/clean_clean/clean1_045.wav" type="audio/wav"></audio>
+            <p>
+              <b>"A male speaks in a quiet room."</b>
+            </p>
+            <audio controls><source src="./static/wavs/clean_clean_text/cont_630.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_clean_text/out_630.wav" type="audio/wav"></audio>
           </div>
-          <div class="column content">
-            <audio controls><source src="./static/wavs/clean_clean/clean2_045.wav" type="audio/wav"></audio>
-          </div>
-          <div class="column content">
-            <audio controls><source src="./static/wavs/clean_clean/045.wav" type="audio/wav"></audio>
-          </div>          
+          
         </div>
       </div>
     </div>
@@ -182,34 +187,36 @@
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              <b>Content prompt</b>
-            </p>
-            <audio controls><source src="./static/wavs/clean_env/clean1_014.wav" type="audio/wav"></audio>
-          </div>
-          <div class="column content">
-            <p>
               <b>Reference prompt</b>
             </p>
-            <audio controls><source src="./static/wavs/clean_env/noise2_014.wav" type="audio/wav"></audio>
-          </div>
-          <div class="column content">
+            <p>
+              <b>Content prompt</b>
+            </p>
             <p>
               <b>Generated audio</b>
             </p>
-            <audio controls><source src="./static/wavs/clean_env/014.wav" type="audio/wav"></audio>
-          </div>          
-        </div>
-
-        <div class="columns is-centered">
-          <div class="column content">
-            <audio controls><source src="./static/wavs/clean_env/clean1_042.wav" type="audio/wav"></audio>
           </div>
           <div class="column content">
-            <audio controls><source src="./static/wavs/clean_env/noise2_042.wav" type="audio/wav"></audio>
+            <p>
+              <b>"A female speaks in a forest with birds singing melodiously."</b>
+            </p>
+            <audio controls><source src="./static/wavs/clean_env_text/cont_254.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_env_text/out_254.wav" type="audio/wav"></audio>
+          </div>  
+          <div class="column content">
+            <p>
+              <b>"A female speaks in a large library with silence enveloping."</b>
+            </p>
+            <audio controls><source src="./static/wavs/clean_env_text/cont_071.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_env_text/out_071.wav" type="audio/wav"></audio>
           </div>
           <div class="column content">
-            <audio controls><source src="./static/wavs/clean_env/042.wav" type="audio/wav"></audio>
-          </div>          
+            <p>
+              <b>"A male speaks in a small concert hall with instruments tuning."</b>
+            </p>
+            <audio controls><source src="./static/wavs/clean_env_text/cont_1029.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_env_text/out_1029.wav" type="audio/wav"></audio>
+          </div>    
         </div>
       </div>
     </div>
@@ -220,34 +227,36 @@
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              <b>Content prompt</b>
-            </p>
-            <audio controls><source src="./static/wavs/env_clean/noise1_247.wav" type="audio/wav"></audio>
-          </div>
-          <div class="column content">
-            <p>
               <b>Reference prompt</b>
             </p>
-            <audio controls><source src="./static/wavs/env_clean/clean2_247.wav" type="audio/wav"></audio>
-          </div>
-          <div class="column content">
+            <p>
+              <b>Content prompt</b>
+            </p>
             <p>
               <b>Generated audio</b>
             </p>
-            <audio controls><source src="./static/wavs/env_clean/247.wav" type="audio/wav"></audio>
-          </div>          
-        </div>
-
-        <div class="columns is-centered">
-          <div class="column content">
-            <audio controls><source src="./static/wavs/env_clean/noise1_855.wav" type="audio/wav"></audio>
           </div>
           <div class="column content">
-            <audio controls><source src="./static/wavs/env_clean/clean2_855.wav" type="audio/wav"></audio>
+            <p>
+              <b>"A female speaks in a quiet room."</b>
+            </p>
+            <audio controls><source src="./static/wavs/env_clean_text/cont_033.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_clean_text/out_033.wav" type="audio/wav"></audio>
           </div>
           <div class="column content">
-            <audio controls><source src="./static/wavs/env_clean/855.wav" type="audio/wav"></audio>
-          </div>          
+            <p>
+              <b>"A male speaks in a quiet room."</b>
+            </p>
+            <audio controls><source src="./static/wavs/env_clean_text/cont_1146.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_clean_text/out_1146.wav" type="audio/wav"></audio>
+          </div>    
+          <div class="column content">
+            <p>
+              <b>"A male speaks in a quiet room."</b>
+            </p>
+            <audio controls><source src="./static/wavs/env_clean_text/cont_619.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_clean_text/out_619.wav" type="audio/wav"></audio>
+          </div>  
         </div>
       </div>
     </div>
@@ -258,38 +267,39 @@
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              <b>Content prompt</b>
-            </p>
-            <audio controls><source src="./static/wavs/env_env/noise1_000.wav" type="audio/wav"></audio>
-          </div>
-          <div class="column content">
-            <p>
               <b>Reference prompt</b>
             </p>
-            <audio controls><source src="./static/wavs/env_env/noise2_000.wav" type="audio/wav"></audio>
-          </div>
-          <div class="column content">
+            <p>
+              <b>Content prompt</b>
+            </p>
             <p>
               <b>Generated audio</b>
             </p>
-            <audio controls><source src="./static/wavs/env_env/000.wav" type="audio/wav"></audio>
-          </div>          
-        </div>
-
-        <div class="columns is-centered">
-          <div class="column content">
-            <audio controls><source src="./static/wavs/env_env/noise1_166.wav" type="audio/wav"></audio>
           </div>
           <div class="column content">
-            <audio controls><source src="./static/wavs/env_env/noise2_166.wav" type="audio/wav"></audio>
+            <p>
+              <b>"A female speaks in a large bedroom with thunder rumbling."</b>
+            </p>
+            <audio controls><source src="./static/wavs/env_env_text/cont_147.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_env_text/out_147.wav" type="audio/wav"></audio>
           </div>
           <div class="column content">
-            <audio controls><source src="./static/wavs/env_env/166.wav" type="audio/wav"></audio>
-          </div>          
+            <p>
+              <b>"A female speaks in a small concert hall with instruments tuning"</b>
+            </p>
+            <audio controls><source src="./static/wavs/env_env_text/cont_377.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_env_text/out_377.wav" type="audio/wav"></audio>
+          </div>
+          <div class="column content">
+            <p>
+              <b>"A male speaks in a hilltop with birds chirping happily."</b>
+            </p>
+            <audio controls><source src="./static/wavs/env_env_text/cont_865.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_env_text/out_865.wav" type="audio/wav"></audio>
+          </div>           
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -297,9 +307,384 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">GPT4 Text reference prompts</h2>
+        <h2 class="title is-3">AST with Simulated Audio reference prompt</h2>
         <div class="content has-text-justified">
-          <p>Here, we share text reference prompts generated using GPT4. 
+          <p>Here, all of the results were using only unseen and unheard speakers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Case 1 (Clean-to-Clean)</h3>
+
+        <div class="columns is-centered">
+          <div class="column content">
+              <p>
+                <b>Reference prompt</b>
+              </p>
+              <p>
+                <b>Content prompt</b>
+              </p>
+              <p>
+                <b>Generated audio</b>
+              </p>
+          </div>
+          <div class="column content">
+            <audio controls><source src="./static/wavs/clean_clean/aud_000.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_clean/cont_000.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_clean/out_000.wav" type="audio/wav"></audio>
+          </div>
+          <div class="column content">
+            <audio controls><source src="./static/wavs/clean_clean/aud_020.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_clean/cont_020.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_clean/out_020.wav" type="audio/wav"></audio>
+          </div>
+          <div class="column content">
+            <audio controls><source src="./static/wavs/clean_clean/aud_035.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_clean/cont_035.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_clean/out_035.wav" type="audio/wav"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Case 2 (Clean-to-Env)</h3>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              <b>Reference prompt</b>
+            </p>
+            <p>
+              <b>Content prompt</b>
+            </p>
+            <p>
+              <b>Generated audio</b>
+            </p>
+          </div>
+          <div class="column content">
+            <audio controls><source src="./static/wavs/clean_env/noise2_014.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_env/clean1_014.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_env/014.wav" type="audio/wav"></audio>
+          </div>
+          <div class="column content">
+            <audio controls><source src="./static/wavs/clean_env/noise2_042.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_env/clean1_042.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_env/042.wav" type="audio/wav"></audio>
+          </div>    
+          <div class="column content">
+            <audio controls><source src="./static/wavs/clean_env/aud_126.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_env/cont_126.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/clean_env/out_126.wav" type="audio/wav"></audio>
+          </div>      
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Case 3 (Env-to-Clean)</h3>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              <b>Reference prompt</b>
+            </p>
+            <p>
+              <b>Content prompt</b>
+            </p>
+            <p>
+              <b>Generated audio</b>
+            </p>
+          </div>
+          <div class="column content">
+            <audio controls><source src="./static/wavs/env_clean/aud_247.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_clean/cont_247.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_clean/out_247.wav" type="audio/wav"></audio>
+          </div>
+          <div class="column content">
+            <audio controls><source src="./static/wavs/env_clean/aud_069.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_clean/cont_069.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_clean/out_069.wav" type="audio/wav"></audio>
+          </div>      
+          <div class="column content">
+            <audio controls><source src="./static/wavs/env_clean/aud_007.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_clean/cont_007.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_clean/out_007.wav" type="audio/wav"></audio>
+          </div>      
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Case 4 (Env-to-Env)</h3>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              <b>Reference prompt</b>
+            </p>
+            <p>
+              <b>Content prompt</b>
+            </p>
+            <p>
+              <b>Generated audio</b>
+            </p>
+          </div>
+          <div class="column content">
+            <audio controls><source src="./static/wavs/env_env/aud_166.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_env/cont_166.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_env/out_166.wav" type="audio/wav"></audio>
+          </div>
+          <div class="column content">
+            <audio controls><source src="./static/wavs/env_env/aud_229.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_env/cont_229.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_env/out_229.wav" type="audio/wav"></audio>
+          </div> 
+          <div class="column content">
+            <audio controls><source src="./static/wavs/env_env/aud_364.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_env/cont_364.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/env_env/out_364.wav" type="audio/wav"></audio>
+          </div>            
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">AST with AudioCaps Text reference prompt</h2>
+        <div class="content has-text-justified">
+          <p>Here, all of the results were using only unseen and unheard speakers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              <b>Reference prompt</b>
+            </p>
+            <p>
+              <b>Content prompt</b>
+            </p>
+            <p>
+              <b>Generated audio</b>
+            </p>
+          </div>
+          <div class="column content">
+            <p>
+              <b>"A man speaks into an echoing, a crowd laughs and cheers"</b>
+            </p>
+            <p>
+              <b>N/A</b>
+              </br></br>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_text/audioldm_5873.wav" type="audio/wav"></audio>
+          </div>
+
+          <div class="column content">
+            <p>
+              <b>"A man speaks into an echoing, a crowd laughs and cheers"</b>
+            </p>
+            <p>
+              <b>"Nature of the effect produced by early impressions"</b>
+              </br>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_text/voiceldm_5873.wav" type="audio/wav"></audio>
+          </div>    
+
+          <div class="column content">
+            <p>
+              <b>"A man speaks into an echoing, a crowd laughs and cheers"</b>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_text/cont_5873.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/audiocaps_text/astldm_5873.wav" type="audio/wav"></audio>
+          </div>    
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              <b>Reference prompt</b>
+            </p>
+            <p>
+              <b>Content prompt</b>
+            </p>
+            <p>
+              <b>Generated audio</b>
+            </p>
+          </div>
+          <div class="column content">
+            <p>
+              <b>"Crumpling paper noise with female speech"</b>
+            </p>
+            <p>
+              <b>N/A</b>
+              </br></br>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_text/audioldm_81991.wav" type="audio/wav"></audio>
+          </div>
+
+          <div class="column content">
+            <p>
+              <b>"Crumpling paper noise with female speech"</b>
+            </p>
+            <p>
+              <b>"Is there not a median everywhere"</b>
+              </br></br>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_text/voiceldm_81991.wav" type="audio/wav"></audio>
+          </div>    
+
+          <div class="column content">
+            <p>
+              <b>"Crumpling paper noise with female speech"</b>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_text/cont_81991.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/audiocaps_text/astldm_81991.wav" type="audio/wav"></audio>
+          </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">AST with AudioCaps Audio reference prompt</h2>
+        <div class="content has-text-justified">
+          <p>Here, all of the results were using only unseen and unheard speakers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="columns is-centered">
+          <div class="column content">
+              <p>
+                <h3 class="title is-4"> \ </h3>
+              </p>
+              <p>
+                <b>Reference prompt</b>
+              </p>
+              <p>
+                <b>Content prompt</b>
+              </p>
+              <p>
+                <b>Generated audio</b>
+              </p>
+          </div>
+          <div class="column content">
+            <p>
+              <h3 class="title is-4">AudioLDM</h3>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_audio/audio_105761.wav" type="audio/wav"></audio>
+            <p>
+              <b>N/A </b>
+              </br></br>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_audio/audioldm_105761.wav" type="audio/wav"></audio>
+          </div>
+          <div class="column content">
+            <p>
+              <h3 class="title is-4">VoiceLDM</h3>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_audio/audio_105761.wav" type="audio/wav"></audio>
+            <p>
+              <b>"To be or not to be that is the question whether its nobler"</b>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_audio/voiceldm_105761.wav" type="audio/wav"></audio>
+          </div>
+          <div class="column content">
+            <p>
+              <h3 class="title is-4">Proposed</h3>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_audio/audio_105761.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/audiocaps_audio/cont_105761.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/audiocaps_audio/astldm_105761.wav" type="audio/wav"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="columns is-centered">
+          <div class="column content">
+              <p>
+                <h3 class="title is-4"> \ </h3>
+              </p>
+              <p>
+                <b>Reference prompt</b>
+              </p>
+              <p>
+                <b>Content prompt</b>
+              </p>
+              <p>
+                <b>Generated audio</b>
+              </p>
+          </div>
+          <div class="column content">
+            <p>
+              <h3 class="title is-4">AudioLDM</h3>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_audio/audio_102742.wav" type="audio/wav"></audio>
+            <p>
+              <b>N/A </b>
+              </br></br>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_audio/audioldm_102742.wav" type="audio/wav"></audio>
+          </div>
+          <div class="column content">
+            <p>
+              <h3 class="title is-4">VoiceLDM</h3>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_audio/audio_102742.wav" type="audio/wav"></audio>
+            <p>
+              <b>"Again again" </b>
+              </br></br>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_audio/voiceldm_102742.wav" type="audio/wav"></audio>
+          </div>
+          <div class="column content">
+            <p>
+              <h3 class="title is-4">Proposed</h3>
+            </p>
+            <audio controls><source src="./static/wavs/audiocaps_audio/audio_102742.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/audiocaps_audio/cont_102742.wav" type="audio/wav"></audio>
+            <audio controls><source src="./static/wavs/audiocaps_audio/astldm_102742.wav" type="audio/wav"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">LLM Text reference prompts</h2>
+        <div class="content has-text-justified">
+          <p>Here, we share text reference prompts generated using LLM. 
             <p>Please feel free to download text files if you need it!</p></p>
           <p>
             <a href="./static/textprompts/female_clean.txt" download="female_clean.txt">

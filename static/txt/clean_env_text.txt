@@ -1,0 +1,10 @@
+ID txt
+072 A female speaks in a large kitchen with dishes clattering.
+071 A female speaks in a large library with silence enveloping.
+079 A female speaks in a large concert hall with instruments tuning.
+108 A female speaks in a large bedroom with rain tapping.
+254 A female speaks in a forest with birds singing melodiously.
+261 A female speaks in a meadow with insects buzzing softly.
+604 A male speaks in a large library with pages rustling.
+609 A male speaks in a large office with keyboards tapping.
+1029 A male speaks in a small concert hall with instruments tuning.
