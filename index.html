@@ -133,7 +133,6 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">AST with LLM Text reference prompt</h2>
         <div class="content has-text-justified">
-          <p>Here, all of the results were using only unseen and unheard speakers.</p>
         </div>
       </div>
     </div>
@@ -309,7 +308,6 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">AST with Simulated Audio reference prompt</h2>
         <div class="content has-text-justified">
-          <p>Here, all of the results were using only unseen and unheard speakers.</p>
         </div>
       </div>
     </div>
@@ -460,7 +458,6 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">AST with AudioCaps Text reference prompt</h2>
         <div class="content has-text-justified">
-          <p>Here, all of the results were using only unseen and unheard speakers.</p>
         </div>
       </div>
     </div>
@@ -469,6 +466,9 @@
       <div class="column is-four-fifths">
         <div class="columns is-centered">
           <div class="column content">
+            <p>
+              <h3 class="title is-4"> \ </h3>
+            </p>
             <p>
               <b>Reference prompt</b>
             </p>
@@ -481,6 +481,9 @@
           </div>
           <div class="column content">
             <p>
+              <h3 class="title is-4">AudioLDM</h3>
+            </p>
+            <p>
               <b>"A man speaks into an echoing, a crowd laughs and cheers"</b>
             </p>
             <p>
@@ -492,6 +495,9 @@
 
           <div class="column content">
             <p>
+              <h3 class="title is-4">VoiceLDM</h3>
+            </p>
+            <p>
               <b>"A man speaks into an echoing, a crowd laughs and cheers"</b>
             </p>
             <p>
@@ -502,6 +508,9 @@
           </div>    
 
           <div class="column content">
+            <p>
+              <h3 class="title is-4">AST-LDM</h3>
+            </p>
             <p>
               <b>"A man speaks into an echoing, a crowd laughs and cheers"</b>
             </p>
@@ -568,7 +577,6 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">AST with AudioCaps Audio reference prompt</h2>
         <div class="content has-text-justified">
-          <p>Here, all of the results were using only unseen and unheard speakers.</p>
         </div>
       </div>
     </div>
@@ -577,18 +585,18 @@
       <div class="column is-four-fifths">
         <div class="columns is-centered">
           <div class="column content">
-              <p>
-                <h3 class="title is-4"> \ </h3>
-              </p>
-              <p>
-                <b>Reference prompt</b>
-              </p>
-              <p>
-                <b>Content prompt</b>
-              </p>
-              <p>
-                <b>Generated audio</b>
-              </p>
+            <p>
+              <h3 class="title is-4"> \ </h3>
+            </p>
+            <p>
+              <b>Reference prompt</b>
+            </p>
+            <p>
+              <b>Content prompt</b>
+            </p>
+            <p>
+              <b>Generated audio</b>
+            </p>
           </div>
           <div class="column content">
             <p>
@@ -600,7 +608,7 @@
               </br></br>
             </p>
             <audio controls><source src="./static/wavs/audiocaps_audio/audioldm_105761.wav" type="audio/wav"></audio>
-          </div>
+          </div> 
           <div class="column content">
             <p>
               <h3 class="title is-4">VoiceLDM</h3>
@@ -613,7 +621,7 @@
           </div>
           <div class="column content">
             <p>
-              <h3 class="title is-4">Proposed</h3>
+              <h3 class="title is-4">AST-LDM</h3>
             </p>
             <audio controls><source src="./static/wavs/audiocaps_audio/audio_105761.wav" type="audio/wav"></audio>
             <audio controls><source src="./static/wavs/audiocaps_audio/cont_105761.wav" type="audio/wav"></audio>
@@ -628,9 +636,6 @@
         <div class="columns is-centered">
           <div class="column content">
               <p>
-                <h3 class="title is-4"> \ </h3>
-              </p>
-              <p>
                 <b>Reference prompt</b>
               </p>
               <p>
@@ -641,9 +646,6 @@
               </p>
           </div>
           <div class="column content">
-            <p>
-              <h3 class="title is-4">AudioLDM</h3>
-            </p>
             <audio controls><source src="./static/wavs/audiocaps_audio/audio_102742.wav" type="audio/wav"></audio>
             <p>
               <b>N/A </b>
@@ -652,9 +654,6 @@
             <audio controls><source src="./static/wavs/audiocaps_audio/audioldm_102742.wav" type="audio/wav"></audio>
           </div>
           <div class="column content">
-            <p>
-              <h3 class="title is-4">VoiceLDM</h3>
-            </p>
             <audio controls><source src="./static/wavs/audiocaps_audio/audio_102742.wav" type="audio/wav"></audio>
             <p>
               <b>"Again again" </b>
@@ -663,9 +662,6 @@
             <audio controls><source src="./static/wavs/audiocaps_audio/voiceldm_102742.wav" type="audio/wav"></audio>
           </div>
           <div class="column content">
-            <p>
-              <h3 class="title is-4">Proposed</h3>
-            </p>
             <audio controls><source src="./static/wavs/audiocaps_audio/audio_102742.wav" type="audio/wav"></audio>
             <audio controls><source src="./static/wavs/audiocaps_audio/cont_102742.wav" type="audio/wav"></audio>
             <audio controls><source src="./static/wavs/audiocaps_audio/astldm_102742.wav" type="audio/wav"></audio>
@@ -687,23 +683,8 @@
           <p>Here, we share text reference prompts generated using LLM. 
             <p>Please feel free to download text files if you need it!</p></p>
           <p>
-            <a href="./static/textprompts/female_clean.txt" download="female_clean.txt">
-            female_clean.txt
-            </a>
-          </p>
-          <p>
-            <a href="./static/textprompts/female_env.txt" download="female_env.txt">
-            female_env.txt
-            </a>
-          </p>
-          <p>
-            <a href="./static/textprompts/male_clean.txt" download="male_clean.txt">
-            male_clean.txt
-            </a>
-          </p>
-          <p>
-            <a href="./static/textprompts/male_env.txt" download="male_env.txt">
-            male_env.txt
+            <a href="./static/textprompts/LLM_prompts.json" download="female_clean.txt">
+            LLM_prompts.json
             </a>
           </p>
         </div>
