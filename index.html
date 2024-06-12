@@ -77,7 +77,18 @@
           <h2 class="title is-1 publication-title"><br>Speak in the Scene:<br>Diffusion-based Acoustic Scene Transfer toward Immersive Speech Generation</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <p>Anonymous submission to Interspeech 2024<p>
+              <head>
+                <script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({            
+                        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}            
+                    });
+                </script>
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+              </head>
+              <p>Miseul Kim$^{1,2}$, Soo-Whan Chung$^{1}$, Youna Ji$^{1}$, Hong-Goo Kang$^{2}$, Min-Seok Choi$^{1}$<p>
+              <p>$^1$Naver Cloud, South Korea, $^2$Yonsei University, South Korea<p>
+              <p style="font-size:0.7em">miseul4345@dsp.yonsei.ac.kr, soowhan.chung@navercorp.com</p>
+              <p style="font-size:0.7em">youna.ji@navercorp.com, hgkang@yonsei.ac.kr, minseok.choi@navercorp.com</p>
             </span>
           </div>
           </div>
@@ -96,7 +107,7 @@
             <!-- </div> -->
         </div>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">AST-LDM</span> transfers input speech (content prompt) to target (reference prompt) acoustic scene!.
+        <span class="dnerf">AST-LDM</span> transfers input speech (content prompt) to target (reference prompt) acoustic scene!
       </h2>
     </div>
   </div>
@@ -114,7 +125,7 @@
           <p>
             This paper introduces a novel task in generative speech processing, Acoustic Scene Transfer (AST), which aims to transfer acoustic scenes of speech signals to diverse environments.
             AST promises an immersive experience in speech perception by adapting the acoustic scene behind speech signals to desired environments.
-            We propose AST-LDM for the AST task, which generates speech signals accompanied by the target acoustic scene of the reference speech.
+            We propose AST-LDM for the AST task, which generates speech signals accompanied by the target acoustic scene of the reference prompt.
             Specifically, AST-LDM is a latent diffusion model conditioned by CLAP embeddings that describe target acoustic scenes in either audio or text modalities.
             The contributions of this paper include introducing the AST task and implementing its baseline model.
             For AST-LDM, we emphasize its core framework, which is to preserve the input speech and generate audio consistently with both the given speech and the target acoustic environment.
